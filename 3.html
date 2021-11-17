@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #root {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return (
+            <div style={{ width: "60%" }}>
+              <h1 style={{textAlign:"center"}}>Task 3</h1>
+              <input
+                value="Task 3"
+                type="text"
+                style={{
+                  width: "80%",
+                  padding: "10px",
+                  fontSize: "15px",
+                  margin: "10px",
+                  border: "2px solid orange",
+                  borderRadius: "4px",
+                }}
+              />
+              <button
+                style={{
+                  padding: "10px",
+                  color: "orange",
+                  fontSize: "15px",
+                  background: "transparent",
+                  border: "2px solid orange",
+                  cursor: "pointer",
+                  borderRadius: "4px",
+                }}
+              >Confirm</button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
