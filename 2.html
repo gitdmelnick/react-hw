@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #root {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script type="module">
+      const rootElement = document.getElementById("root");
+
+      const title = React.createElement(
+        "h1",
+        { style: { textAlign: "center" } },
+        "Task 2"
+      );
+      const input = React.createElement("input", {
+        type: "text",
+        value: "Input",
+        style: {
+          width: "80%",
+          padding: "10px",
+          fontSize: "15px",
+          margin: "10px",
+          border: "2px solid orange",
+          borderRadius: "4px",
+        },
+      });
+      const button = React.createElement(
+        "button",
+        {
+          style: {
+            padding: "10px",
+            color: "orange",
+            fontSize: "15px",
+            background: "transparent",
+            border: "2px solid orange",
+            cursor: "pointer",
+            borderRadius: "4px",
+          },
+        },
+        "Confirm"
+      );
+
+      const container = React.createElement("div", {
+        style: { width: "60%" },
+        children: [title, input, button],
+      });
+
+      ReactDOM.render(container, rootElement);
+    </script>
+  </body>
+</html>
