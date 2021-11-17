@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      const container = document.createElement('div');
+      container.style.cssText += 'width:60%';
+
+      const title = document.createElement('h1');
+      title.style.cssText += `text-align: center`;
+      title.innerText = 'Task 1';
+
+      const input = document.createElement('input');
+      input.setAttribute('type', 'text');
+      input.setAttribute('value', 'Input');
+      input.style.cssText +=
+        'width: 80%; padding: 10px; font-size: 15px; margin: 10px 10px; border: 2px solid orange; border-radius: 4px;';
+
+      const button = document.createElement('button');
+      button.style.cssText +=
+        'padding: 10px; color: orange; font-size: 15px; background: transparent; border: 2px solid orange; cursor: pointer; border-radius: 4px';
+      button.innerText = 'Confirm';
+
+      document.body.appendChild(container);
+
+      container.append(...[title, input, button]);
+    </script>
+  </body>
+</html>
