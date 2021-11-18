@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import DummyComponent from './components/DummyComponent';
+import MyPureComponent from './components/MyPureComponent';
 import './styles/App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <input type="text" ref={inputRef} onChange={handleInput}></input>
       <button disabled={isDisabled}>Disable Me!</button>
       <button onClick={handleFocusClick}>Now Focus</button>
+      <MyPureComponent shouldChange={true}/>
     </div>
   );
 }
